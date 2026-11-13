@@ -12,26 +12,27 @@ echo -e "${CYAN}========================================${NC}"
 termux-setup-storage
 
 TARGET_DIR="/sdcard/FrutigerAero"
-mkdir -p "$TARGET_DIR/Wallpapers"
-mkdir -p "$TARGET_DIR/Icons"
-mkdir -p "$TARGET_DIR/Launchers"
+mkdir -p "$TARGET_DIR/Wallpapers" "$TARGET_DIR/Icons" "$TARGET_DIR/Launchers"
 
-echo -e "${GREEN}[+] Copying files to $TARGET_DIR...${NC}"
+echo -e "${GREEN}[+] Copying wallpapers, icons, and launcher...${NC}"
 cp -r wallpapers/* "$TARGET_DIR/Wallpapers/" 2>/dev/null
 cp -r icons/* "$TARGET_DIR/Icons/" 2>/dev/null
 cp -r launchers/* "$TARGET_DIR/Launchers/" 2>/dev/null
 
-WALLPAPER_PATH="$TARGET_DIR/Wallpapers/defaut_wallpaper.jpg"
-
-if [ -f "$WALLPAPER_PATH" ]; then
-    if command -v termux-wallpaper &> /dev/null; then
-        echo -e "${CYAN}[*] Setting default_wallpaper.jpg...${NC}"
-        termux-wallpaper -f "$WALLPAPER_PATH"
-    else
-        echo -e "${YELLOW}[!] Install termux-api to apply wallpaper automatically.${NC}"
-    fi
+# Встановлення Nova Launcher прямо з папки launchers/
+LAUNCHER_APK="$TARGET_DIR/Launchers/nova_launcher.apk"
+if [ -f "$LAUNCHER_APK" ]; then
+    echo -e "${GREEN}[+] Installing Nova Launcher...${NC}"
+    termux-open "$LAUNCHER_APK"
 else
-    echo -e "${YELLOW}[!] default_wallpaper.jpg not found.${NC}"
+    echo -e "${YELLOW}[!] nova_launcher.apk not found in launchers/ folder.${NC}"
 fi
 
-echo -e "${GREEN}[✓] Setup completed successfully!${NC}"
+# Встановлення шпалер
+WALLPAPER_PATH="$TARGET_DIR/Wallpapers/defaut_wallpaper.jpg"
+if [ -f "$WALLPAPER_PATH" ] && command -v termux-wallpaper &> /dev/null; then
+    echo -e "${CYAN}[*] Setting default_wallpaper.jpg...${NC}"
+    termux-wallpaper -f "$WALLPAPER_PATH"
+fi
+
+echo -e "${GREEN}[✓] Setup completed!${NC}"
