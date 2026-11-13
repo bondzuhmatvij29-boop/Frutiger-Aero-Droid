@@ -1,6 +1,6 @@
 # 🌐 Frutiger Aero Droid
 
-> Bring back the glossy, vibrant, and skeuomorphic aesthetic of the 2000s (Windows 7 / iOS 6 / early Android) to your Android device!
+> Bring back the glossy, vibrant, and skeuomorphic aesthetic of the 2000s (Windows 7 / iOS 6 / early Android) to your modern Android device!
 
 ---
 
@@ -17,7 +17,6 @@ Frutiger-Aero-Droid/
 ├── windows.sh                   # Setup script for Windows (via ADB)
 ├── linux.sh                     # Setup script for Linux (via ADB)
 ├── macos.sh                     # Setup script for macOS (via ADB)
-├── termux.sh                    # Setup script for Termux (directly on phone)
 └── README.md
 ```
 
@@ -25,22 +24,9 @@ Frutiger-Aero-Droid/
 
 ## 🚀 Quick Start & Installation
 
-Download the repository as a **ZIP archive** (or clone it), extract it, and run the script for your platform:
+Download the repository as a **ZIP archive** (or clone it), extract it, and choose your preferred installation method:
 
-### 📱 1. Android (Directly via Termux)
-1. Open **Termux** and grant storage permissions:
-   ```bash
-   termux-setup-storage
-   ```
-2. Navigate to the extracted folder and run:
-   ```bash
-   bash termux.sh
-   ```
-*(Note: Install **Termux:API** if you want the script to automatically apply `default_wallpaper.jpg`).*
-
----
-
-### 💻 2. PC / Laptop (via ADB)
+### 💻 1. Automatic Setup via PC (ADB)
 Make sure **USB Debugging** is enabled in Developer Options on your phone and connect it via USB.
 
 * **Windows (Windows Terminal / Git Bash):**
@@ -62,21 +48,30 @@ Make sure **USB Debugging** is enabled in Developer Options on your phone and co
 
 ---
 
+### 📱 2. Manual Setup (Directly on Android)
+If you don't have a PC nearby, you can set everything up manually in under a minute:
+
+1. Extract the downloaded repository archive on your phone.
+2. Open the `launchers/` folder and install **`nova_launcher.apk`**.
+3. Open the `wallpapers/` folder and set **`default_wallpaper.jpg`** as your home screen wallpaper.
+4. Extract **`aero_icons.zip`** from the `icons/` folder.
+
+---
+
 ## 🎨 How to Apply Icons in Nova Launcher
 
-Once the script finishes copying the files to `/sdcard/FrutigerAero/` and installing **Nova Launcher 6.0 Beta 12**:
+Once **Nova Launcher 6.0 Beta 12** is installed and set as your default home screen:
 
-1. Extract `aero_icons.zip` inside `/sdcard/FrutigerAero/Icons/` using your file manager.
-2. Press and hold any app icon on your home screen (e.g., Camera, Phone, Browser).
-3. Tap **Edit** (pencil icon) -> tap the **icon image** -> select **Gallery apps**.
-4. Navigate to `FrutigerAero/Icons/` and pick the matching glossy icon!
+1. Press and hold any app icon on your home screen (e.g., Camera, Phone, Browser).
+2. Tap **Edit** (pencil icon) -> tap the **icon image** -> select **Gallery apps**.
+3. Navigate to your extracted `icons/` folder and pick the matching glossy icon!
 
 ---
 
 ## ✨ Features
 - **Lightweight & Compatible:** Uses **Nova Launcher 6.0 Beta 12**, ensuring smooth performance even on legacy devices starting from **Android 5.0 (Lollipop)**.
 - **All-in-One Archive:** Wallpapers, icons, and the launcher APK are bundled locally—no extra downloads required during installation.
-- **Cross-Platform Setup:** Ready-to-use scripts for Windows, Linux, macOS, and Termux.
+- **Cross-Platform ADB Scripts:** One-click automated deployment from Windows, Linux, and macOS.
 
 ---
 
