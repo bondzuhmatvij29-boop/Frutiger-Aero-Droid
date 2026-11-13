@@ -14,9 +14,9 @@ Frutiger-Aero-Droid/
 │   └── aero_icons.zip           # Frutiger Aero app icon pack
 ├── launchers/
 │   └── nova_launcher.apk        # Nova Launcher v6.0 Beta 12 (Android 5.0+)
-├── windows.sh                   # Setup script for Windows (via ADB)
-├── linux.sh                     # Setup script for Linux (via ADB)
-├── macos.sh                     # Setup script for macOS (via ADB)
+├── windows.sh                   # Setup script for Windows (USB & Wi-Fi ADB)
+├── linux.sh                     # Setup script for Linux (USB & Wi-Fi ADB)
+├── macos.sh                     # Setup script for macOS (USB & Wi-Fi ADB)
 └── README.md
 ```
 
@@ -26,25 +26,18 @@ Frutiger-Aero-Droid/
 
 Download the repository as a **ZIP archive** (or clone it), extract it, and choose your preferred installation method:
 
-### 💻 1. Automatic Setup via PC (ADB)
-Make sure **USB Debugging** is enabled in Developer Options on your phone and connect it via USB.
+### 💻 1. Automatic Setup via PC (USB or Wi-Fi / Hotspot)
+Enable **USB Debugging** (and **Install via USB** on Xiaomi/MIUI devices) in Developer Options.
 
-* **Windows (Windows Terminal / Git Bash):**
-  ```bash
-  bash windows.sh
-  ```
+Run the script for your OS:
+* **Windows (Windows Terminal / Git Bash):** `bash windows.sh`
+* **Linux:** `chmod +x linux.sh && ./linux.sh`
+* **macOS:** `chmod +x macos.sh && ./macos.sh`
 
-* **Linux (Ubuntu, Debian, Arch, etc.):**
-  ```bash
-  chmod +x linux.sh
-  ./linux.sh
-  ```
-
-* **macOS:**
-  ```bash
-  chmod +x macos.sh
-  ./macos.sh
-  ```
+**Choose one of 3 connection modes in the terminal:**
+1. **USB Cable:** Connect your phone via USB and allow debugging on the screen.
+2. **Wi-Fi / Hotspot (Direct IP):** Connect your PC and phone to the same Wi-Fi or mobile hotspot, and enter your phone's IP address (defaults to port `5555` if no port is specified).
+3. **Wi-Fi / Hotspot + First-Time Pairing (Android 11+):** Open *Developer Options -> Wireless Debugging -> Pair device with pairing code*, and enter the pairing IP:Port + 6-digit code directly in the script.
 
 ---
 
@@ -71,7 +64,7 @@ Once **Nova Launcher 6.0 Beta 12** is installed and set as your default home scr
 ## ✨ Features
 - **Lightweight & Compatible:** Uses **Nova Launcher 6.0 Beta 12**, ensuring smooth performance even on legacy devices starting from **Android 5.0 (Lollipop)**.
 - **All-in-One Archive:** Wallpapers, icons, and the launcher APK are bundled locally—no extra downloads required during installation.
-- **Cross-Platform ADB Scripts:** One-click automated deployment from Windows, Linux, and macOS.
+- **USB & Wireless ADB Support:** Deploy effortlessly over USB cable, local Wi-Fi, or mobile hotspot with built-in Android 11+ pairing support.
 
 ---
 
