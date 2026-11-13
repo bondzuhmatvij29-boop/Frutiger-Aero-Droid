@@ -31,7 +31,7 @@ Frutiger-Aero-Droid/
 ├── launchers/
 │   └── nova_launcher.apk        # Nova Launcher v6.0 Beta 12 (Android 5.0+)
 ├── backups/
-│   └── FrutigerAero.novabackup  # 1-click desktop layout backup (optional)
+│   └── aero.novabackup          # 1-click desktop layout backup (2 MB)
 ├── preview/
 │   └── screenshot.png           # Home screen preview image
 ├── windows.sh                   # Setup script for Windows (USB & Wi-Fi ADB)
@@ -73,10 +73,10 @@ If you don't have a PC nearby (or want to set it up right on your phone):
 
 ---
 
-## ⚡ Pro Tip: 1-Click Layout Restoration via `.novabackup`
+## ⚡ Pro Tip: 1-Click Layout Restoration via `aero.novabackup`
 Instead of placing icons manually, you can instantly restore an ideal Frutiger Aero desktop layout:
 1. In Nova Launcher settings, go to **Backup & import** -> **Restore or import backup**.
-2. Select the `FrutigerAero.novabackup` file from the `backups/` folder.
+2. Select the `aero.novabackup` file from the `backups/` folder.
 
 ---
 
@@ -93,7 +93,7 @@ If you are setting up icons manually:
 ---
 
 ## ✨ Features
-- **Lightweight & Compatible:** Uses **Nova Launcher 6.0 Beta 12**, ensuring smooth performance even on legacy and budget devices starting from **Android 5.0 (Lollipop)**.
+- **Lightweight & Compatible:** Uses **Nova Launcher**, ensuring smooth performance even on legacy and budget devices starting from **Android 5.0 (Lollipop)**.
 - **All-in-One Local Kit:** Wallpapers, icons, and launcher APK are bundled locally—no external internet downloads required during setup.
 - **Advanced ADB Support:** Deploy effortlessly over USB cable, local Wi-Fi, or a custom PC mobile hotspot with built-in Android 11+ pairing support.
 
