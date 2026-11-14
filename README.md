@@ -73,10 +73,10 @@ If you don't have a PC nearby (or want to set it up right on your phone):
 
 ---
 
-## ⚡ Pro Tip: 1-Click Layout Restoration via `aero.novabackup`
+## ⚡ Pro Tip: 1-Click Layout Restoration via `backup.novabackup`
 Instead of placing icons manually, you can instantly restore an ideal Frutiger Aero desktop layout:
 1. In Nova Launcher settings, go to **Backup & import** -> **Restore or import backup**.
-2. Select the `aero.novabackup` file from the `backups/` folder.
+2. Select the `backup.novabackup` file from the `backups/` folder.
 
 ---
 
