@@ -31,7 +31,7 @@ Frutiger-Aero-Droid/
 ├── launchers/
 │   └── nova_launcher.apk        # Nova Launcher v6.0 Beta 12 (Android 5.0+)
 ├── backups/
-│   └── aero.novabackup          # 1-click desktop layout backup (2 MB)
+│   └── backup.novabackup          # 1-click desktop layout backup (2 MB)
 ├── preview/
 │   └── screenshot.png           # Home screen preview image
 ├── windows.sh                   # Setup script for Windows (USB & Wi-Fi ADB)
